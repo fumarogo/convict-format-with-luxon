@@ -1,0 +1,57 @@
+{
+  "name": "convict-format-with-luxon",
+  "version": "1.0.0",
+  "description": "Formats 'duration' and 'timestamp' for convict with Luxon",
+  "main": "build/main.js",
+  "types": "build/main.d.ts",
+  "files": [
+    "build",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "nyc mocha",
+    "lint": "eslint -c .eslintrc --ext .ts src"
+  },
+  "keywords": [
+    "convict",
+    "convict-format",
+    "duration",
+    "timestamp",
+    "luxon"
+  ],
+  "author": "fumarogo",
+  "license": "MIT",
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/chai": "^4.3.4",
+    "@types/convict": "^6.1.1",
+    "@types/luxon": "^3.2.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.11.12",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "chai": "^4.3.7",
+    "convict": "^6.2.4",
+    "eslint": "^8.30.0",
+    "mocha": "^10.2.0",
+    "mocha-junit-reporter": "^2.2.0",
+    "mocha-multi-reporters": "^1.5.1",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "luxon": "^3.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fumarogo/node-convict-with-luxon.git"
+  },
+  "bugs": {
+    "url": "ttps://github.com/fumarogo/node-convict-with-luxon/issues"
+  }
+}
