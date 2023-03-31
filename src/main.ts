@@ -1,4 +1,5 @@
 import { Duration, DateTime } from 'luxon';
+import type { Format, SchemaObj } from 'convict';
 
 function assert(assertion: boolean, errorMessage: string): void {
     if (!assertion) {
@@ -6,7 +7,7 @@ function assert(assertion: boolean, errorMessage: string): void {
     }
 }
 
-export const duration = {
+export const duration: Format = {
     name: 'duration',
     coerce: (v: any): number => {
         const split = v.split(' ');
@@ -22,7 +23,7 @@ export const duration = {
         }
         return v;
     },
-    validate: (x: any): void => {
+    validate: (x: any, _schema: SchemaObj): void => {
         const errorMessage = 'must be a positive integer or human readable string (e.g. 3000, "5 days")';
         if (Number.isInteger(x)) {
             assert(x >= 0, errorMessage);
@@ -32,7 +33,7 @@ export const duration = {
     }
 };
 
-export const timestamp = {
+export const timestamp: Format = {
     name: 'timestamp',
     coerce: (v: any): number => {
         if (typeof v === 'number') {
@@ -45,7 +46,7 @@ export const timestamp = {
             return value.valueOf();
         }
     },
-    validate: (x: any): void => {
+    validate: (x: any, _schema: SchemaObj): void => {
         assert(Number.isInteger(x) && x >= 0, 'must be a positive integer, an ISO 8601 string, or an RFC 2822 string');
     }
 };
