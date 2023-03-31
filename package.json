@@ -1,6 +1,6 @@
 {
   "name": "convict-format-with-luxon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Formats 'duration' and 'timestamp' for convict with Luxon",
   "main": "build/main.js",
   "types": "build/main.d.ts",
@@ -49,9 +49,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fumarogo/node-convict-with-luxon.git"
+    "url": "https://github.com/fumarogo/convict-format-with-luxon.git"
   },
   "bugs": {
-    "url": "ttps://github.com/fumarogo/node-convict-with-luxon/issues"
+    "url": "https://github.com/fumarogo/convict-format-with-luxon/issues"
   }
 }
